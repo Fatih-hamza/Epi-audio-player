@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+}
+
+#audio-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#audio-list div {
+    margin: 10px 0;
+    text-align: center;
+}
+
+audio {
+    width: 100%;
+    max-width: 300px;
+}
