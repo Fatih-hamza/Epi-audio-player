@@ -1,25 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    background-color: #f4f4f4;
+  font-family: "Space Mono", monospace;
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  padding: 2%;
+  margin: 3% auto;
+  border: 1px solid #eee;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.06);
 }
 
-h1 {
-    text-align: center;
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+  letter-spacing: -0.25px;
 }
 
-#audio-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+ol {
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
-#audio-list div {
-    margin: 10px 0;
-    text-align: center;
+li {
+  color: #4F4F4F;
+  padding-left: 2.2%;
+  margin-top: 3%;
+  position: relative;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+li:before {
+  content: "";
+  display: block;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  position: absolute;
+  top: 0.5rem;
+  left: -2.7rem;
+}
+
+strong {
+  color: #292929;
+}
+
+ol.alternating-colors li:nth-child(odd):before {
+  border-color: #0BAD02;
+}
+
+ol.alternating-colors li:nth-child(even):before {
+  border-color: #2378D5;
+}
+
+.audio-container {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1%;
+  width: 100%;
+}
+
+.audio-title {
+  margin: 0 0 1% 0;
+  font-size: 1.2rem;
+  color: #555;
 }
 
 audio {
-    width: 100%;
-    max-width: 300px;
+  width: 100%;
+  outline: none;
 }
+.header{
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+}
+/* Media Queries for Better Responsiveness */
+@media (max-width: 1024px) {
+  body {
+    max-width: 95%;
+    padding: 3%;
+  }
+
+  li {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+
+  li:before {
+    height: 2.5rem;
+    width: 2.5rem;
+    top: 0.5rem;
+    left: -3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    max-width: 100%;
+    padding: 5%;
+  }
+
+  li {
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+  }
+
+  li:before {
+    height: 2.5rem;
+    width: 2.5rem;
+    top: 0.5rem;
+    left: -3.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    max-width: 100%;
+    padding: 8%;
+  }
+
+  li {
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+
+  li:before {
+    height: 2.5rem;
+    width: 2.5rem;
+    top: 0.5rem;
+    left: -4rem;
+  }
+}
+
+
